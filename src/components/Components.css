@@ -1,0 +1,344 @@
+.shield-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.4s ease;
+  transition: border-color 0.4s, background 0.4s;
+}
+
+.shield-card--active {
+  border-color: var(--primary);
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.06), var(--bg-card));
+}
+
+.shield-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shield-svg {
+  color: var(--text-dim);
+  transition: color 0.4s;
+}
+
+.shield-svg--on {
+  color: var(--primary);
+  animation: shieldGlow 2s ease-in-out infinite;
+}
+
+.shield-status {
+  text-align: center;
+}
+
+.shield-status-label {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.shield-timer {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-variant-numeric: tabular-nums;
+  margin-top: 4px;
+  color: var(--text);
+}
+
+.shield-block-info {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 280px;
+  line-height: 1.5;
+}
+
+.shield-btn {
+  width: 100%;
+  max-width: 280px;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.shield-btn:active {
+  transform: scale(0.97);
+}
+
+.shield-btn--start {
+  background: var(--primary);
+  color: #052e1e;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+}
+
+.shield-btn--start:hover {
+  background: #12c98f;
+}
+
+.shield-btn--stop {
+  background: var(--error);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.3);
+}
+
+.shield-btn--stop:hover {
+  background: #f55a5a;
+}
+
+/* Stats */
+.stats-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 20px;
+  border: 1px solid var(--border);
+  animation: fadeIn 0.5s ease;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 8px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+}
+
+.stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Sites */
+.sites-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 20px;
+  border: 1px solid var(--border);
+  animation: fadeIn 0.6s ease;
+}
+
+.sites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sites-header .section-title {
+  margin-bottom: 0;
+}
+
+.add-btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--secondary);
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: rgba(14, 165, 233, 0.1);
+  transition: background 0.2s;
+}
+
+.add-btn:hover:not(:disabled) {
+  background: rgba(14, 165, 233, 0.2);
+}
+
+.add-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  animation: fadeIn 0.3s ease;
+}
+
+.add-input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.add-input:focus {
+  border-color: var(--secondary);
+}
+
+.add-confirm-btn {
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--secondary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 0.15s;
+}
+
+.add-confirm-btn:active {
+  transform: scale(0.97);
+}
+
+.sites-locked-note {
+  font-size: 12px;
+  color: var(--warning);
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: rgba(245, 158, 11, 0.08);
+  border-radius: 8px;
+}
+
+.sites-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.site-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--border);
+  transition: opacity 0.2s;
+}
+
+.site-item:last-child {
+  border-bottom: none;
+}
+
+.site-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.site-label {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.site-url {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.site-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-off {
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.site-remove {
+  font-size: 20px;
+  color: var(--text-dim);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.site-remove:hover:not(:disabled) {
+  color: var(--error);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.site-remove:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Toggle */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: var(--border-light);
+  border-radius: 24px;
+  transition: background 0.25s;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.25s;
+}
+
+.toggle input:checked + .toggle-slider {
+  background: var(--primary);
+}
+
+.toggle input:checked + .toggle-slider::before {
+  transform: translateX(20px);
+}
+
+.toggle input:disabled + .toggle-slider {
+  opacity: 0.5;
+}
